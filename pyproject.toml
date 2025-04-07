@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redis-lru-cache-with-expiry"
+authors = [{name = "Mark Ang", email = "ang1990@hotmail.com"}]
+maintainers = [{name = "Mark Ang", email = "ang1990@hotmail.com"}]
+version = "0.1.0"
+dynamic = ["version"]
+requires-python = ">= 3.5"
+dependencies = [
+    "redis>=5.0.0"
+]
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = []
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "fakeredis"
+]
+
+[tools.pytest.ini_options]
+pythonpath = [
+  "src"
+]
